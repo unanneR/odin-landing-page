@@ -2,10 +2,68 @@
     display: flex;
 
 }
-
 .header-container div {
-    background: peachpuff;
-    border: 4px solid brown;
+    background: peachpuff;   
+    padding: 20px;
     height: 20px;
+    flex: 1 1 auto;
+}
+
+.header-content{
+    display: flex;
+    padding: 50px;
+    flex: 1 1 auto;
+}
+
+
+.top-container {
+    background-color: white;     /* Mockup background is white */
+    display: flex;               /* Makes the 4 blocks sit in a row */
+    justify-content: center;     /* Centers the whole group */
+    gap: 60px;                   /* Puts equal space between each block */
+    padding: 10px 14px;          /* Vertical and horizontal breathing room */
+    /* REMOVED: height and flex: 1 1 auto */
+}
+
+.block {
+    display: flex;               /* This makes the block a flex container too */
+    flex-direction: column;      /* Stacks the image on top of the text */
+    align-items: center;         /* Centers the image and text horizontally */
+    width: 120px;                /* Limits the width of each column */
+    text-align: center;          /* Centers the subtext */
+}
+
+.block img {
+    width: 150px;       /* Set a fixed width */
+    height: 210px;      /* Set a fixed height */
+    
+    /* THE FIXES: */
+    object-fit: cover;  /* Crops the image to fill the box without stretching */
+    display: block;     /* Removes weird tiny gaps at the bottom of images */
+    
+    border: 4px solid #3882F6; 
+    border-radius: 15px;
+}
+
+.first-middle-container{
+    background: green;
+    font-size: 30px;
+    padding: 66px;
+    height: 65px;
+    flex: 1 1 auto;  
+}
+
+.last-middle-container{
+    background: yellow;
+    margin: 32px;
+    padding: 66px;
+    height: 65px;
+    flex: 1 1 auto; 
+}
+
+.bottom-container{
+    background: peachpuff;
+    padding: 10px;
+    height: 10px;
     flex: 1 1 auto;
 }
